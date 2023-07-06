@@ -1,0 +1,40 @@
+.base-skeleton {
+  position: absolute;
+  background: white;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__text {
+    font-weight: bold;
+    line-height: 100%;
+    background-size: 300% 100%;
+    background-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      transparent 40%,
+      rgba(190, 190, 190, 0.5) 50%,
+      transparent 60%,
+      transparent 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: text-color-gradient 2s linear infinite;
+    color: transparent;
+    font-size: 88px;
+  }
+}
+
+@keyframes text-color-gradient {
+  from {
+    background-position: -60% 0;
+  }
+
+  to {
+    background-position: -130% 0;
+  }
+}
